@@ -2,14 +2,16 @@
     display: grid;
     grid-template-columns: 1fr 70% 1fr;
     grid-template-rows: 150px 1fr auto;
+    margin-bottom: 5vw;
 }
 
 header {
     display: grid;
     grid-column: 1/4;
     grid-row: 1/2;
-    grid-template-rows: repeat(2,1fr);
-    grid-template-columns:  128px repeat(2, 1fr);;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 128px repeat(2, 1fr);
+    ;
     align-items: center;
 }
 
@@ -17,6 +19,7 @@ main {
     display: grid;
     grid-column: 2/3;
 }
+
 .search {
     display: grid;
     grid-template-columns: 1fr;
@@ -36,7 +39,7 @@ main {
 
 .apart {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
     gap: 10px;
     grid-row: 1/2;
@@ -44,4 +47,46 @@ main {
 
 button {
     grid-column: 2/3;
+}
+
+/* style part2 */
+
+.answer {
+    background-color: rgb(230, 230, 201);
+    margin-top: 5vw;
+}
+
+.result {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.captureresult {
+    text-align: start;
+    font-weight: bolder;
+    font-size: 20;
+    margin-left: 5vw;
+}
+
+.sort {
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+#resulttext {
+    height: 50vh;
+}
+
+.answer>.button {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.buttonprint {
+    display: grid;
+    border-radius: 0;
+    background-color: white;
+    grid-column: 2/3;
+    margin-right: 40px;
+    margin-bottom: 20px;
 }

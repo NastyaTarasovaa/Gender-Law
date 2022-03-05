@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Гендерное право</title>
-    <!-- <link rel="stylesheet" href="./style/normalize.css"> -->
+    <link rel="stylesheet" href="./style/normalize.css">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="shortcut icon" href="./img/small-logo.png">
 </head>
@@ -21,45 +21,51 @@
         <main>
             <div class="search">
                 <h2>Поиск</h2>
-                <div>
-                    <label for="article">Статья</label>
-                    <input type="text" name="article" id="article">
-                </div>
-                <div>
-                    <label for="number">Номер дела</label>
-                    <input type="text" name="number" id="number" oninput="changeOnNumber(this)" placeholder="Number"
-                        required>
-                </div>
-                <div>
-                    <label for="name">Название дела</label>
-                    <input type="text" name="name" id="name">
-                </div>
-                <div>
-                    <label for="year">Год</label>
-                    <input type="text" name="year" id="year">
-                </div>
-                <div>
-                    <label for="judge">ФИО судьи</label>
-                    <input type="text" name="judge" id="judge" placeholder="Judge"
-                        pattern="[A-Za-zА-Яа-яЁё]+(\s+[A-Za-zА-Яа-яЁё]+)?" required>
-                </div>
-                <div>
-                    <label for="lawyer">ФИО адвоката</label>
-                    <input type="text" name="lawyer" id="lawyer" placeholder="Lawyer"
-                        pattern="[A-Za-zА-Яа-яЁё]+(\s+[A-Za-zА-Яа-яЁё]+)?" required>
-                </div>
-                <div>
-                    <label for="decision">Решение</label>
-                    <input type="text" name="decision" id="decision">
+                <div class="categories">
+                    <div class="apart">
+                        <label for="article">Статья</label>
+                        <input type="text" name="article" id="article" placeholder="Article">
+                        <label for="number">Номер дела*</label>
+                        <input type="text" name="number" id="number" oninput="changeOnNumber(this)" placeholder="Number"
+                            minlength="4" maxlength="7" required>
+                        <label for="name">Название дела</label>
+                        <input type="text" name="title" id="title" placeholder="Title">
+                        <label for="year">Год*</label>
+                        <input type="text" name="year" id="year" placeholder="Year">
+                    </div>
+                    <div class="apart">
+                        <label for="judge">ФИО судьи*</label>
+                        <input type="text" name="judge" id="judge" placeholder="Judge"
+                            pattern="[A-Za-zА-Яа-яЁё]+(\s+[A-Za-zА-Яа-яЁё]+)?" required>
+                        <label for="lawyer">ФИО адвоката*</label>
+                        <input type="text" name="lawyer" id="lawyer" placeholder="Lawyer"
+                            pattern="[A-Za-zА-Яа-яЁё]+(\s+[A-Za-zА-Яа-яЁё]+)?" required>
+                        <label for="decision">Решение</label>
+                        <input type="text" name="decision" id="decision" placeholder="Decision">
+                        <button type="button" onclick="checkAll()">Отправить запрос</button>
+                    </div>
                 </div>
                 <div id="errorMessage"></div>
-                <button type="button" onclick="checkAll()">Отправить запрос</button>
+            </div>
+            <div class="answer">
+                <div class="result">
+                    <h2 class="captureresult">Результат поиска</h2>
+                    <select class="sort">
+                        <option value="date">Дата</option>
+                        <option value="alphabet">Название</option>
+                    </select>
+                </div>
+                <div id="resulttext"></div>
+                <div class="button">
+                    <button class="buttonprint">Распечатать результат</button>
+                </div>
             </div>
         </main>
     </div>
 
-    <script src="index.js"></script>
-    <script src="class.js"></script>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/class.js"></script>
 </body>
 
 </html>

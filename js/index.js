@@ -27,11 +27,11 @@ function checkAll() {
     }
 
     if (!year) {
-        errors.push("Год не заполнен");
+        errors.push("Год не заполнен.");
     } else {
         let nowDate = new Date();
         if (year > nowDate.getFullYear()) {
-            errors.push("Год заполнен некорректно");
+            errors.push("Год заполнен некорректно.");
         }
     }
 
