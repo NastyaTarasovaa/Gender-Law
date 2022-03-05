@@ -8,7 +8,7 @@
     <title>Document</title>
     <style>
         .answer {
-            background-color: beige;
+            background-color: rgb(230, 230, 201);
             width: 100vw;
             height: 70vh;
         }
@@ -27,7 +27,27 @@
 
         .sort {
             margin-right: 40px;
+            margin-top: 20px;
 
+
+
+        }
+
+        #resulttext {
+            height: 50vh;
+        }
+
+        .button {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+        }
+
+        .buttonprint {
+            display: grid;
+            border-radius: 0;
+            background-color: white;
+            grid-column: 2/3;
+            margin-right: 40px;
         }
     </style>
 </head>
@@ -40,6 +60,13 @@
                 <option value="date">Дата</option>
                 <option value="alphabet">Название</option>
             </select>
+        </div>
+        <div id="resulttext">
+
+
+        </div>
+        <div class="button">
+            <button class="buttonprint">Распечатать результат</button>
         </div>
     </div>
 </body>

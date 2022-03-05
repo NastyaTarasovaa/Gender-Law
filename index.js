@@ -47,3 +47,5 @@ function checkAll() {
         alert(`Добро пожаловать!`);
     }
 }
+
+addBtn.addEventListener("click", addStuff);
