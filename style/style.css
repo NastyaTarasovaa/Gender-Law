@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 70% 1fr;
     grid-template-rows: 150px 1fr auto;
 }
 
@@ -13,10 +13,35 @@ header {
     align-items: center;
 }
 
+main {
+    display: grid;
+    grid-column: 2/3;
+}
 .search {
     display: grid;
-    grid-column: 1/3;
-    grid-row: 2/3;
-    gap: 25px;
-    grid-area: repeat(3,1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: 25px 1fr;
+    border: 1px solid black;
+    gap: 50px;
+    justify-items: center;
+    padding: 50px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 40px;
+}
+
+.apart {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: auto;
+    gap: 10px;
+    grid-row: 1/2;
+}
+
+button {
+    grid-column: 2/3;
 }
