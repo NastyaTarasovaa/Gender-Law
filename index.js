@@ -15,24 +15,24 @@ function checkValidity(input) {
     if (validity.patternMismatch) {
         errors.push('Неверный формат заполнения ' + input.placeholder);
     }
-
-    if (validity.rangeOverflow) {
-        let max = input.max;
-        errors.push('Максимальное значение не может быть больше чем ' + max);
-    }
-
-    if (validity.rangeUnderflow) {
-        let min = input.min;
-        errors.push('Минимальное значение не может быть больше чем ' + min);
-    }
 }
 
 function checkAll() {
     errors = [];
     let inputs = document.querySelectorAll("input");
+    let year = document.getElementById("year").value;
 
     for (let input of inputs) {
         checkValidity(input);
+    }
+
+    if (!year) {
+        errors.push("Год не заполнен");
+    } else {
+        let nowDate = new Date();
+        if (year > nowDate.getFullYear()) {
+            errors.push("Год заполнен некорректно");
+        }
     }
 
     if (errors != '') {
