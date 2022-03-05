@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Имя судьи <input type="text" id="judgeName" placeholder="Judge"
+            pattern="[A-Za-zА-Яа-яЁё]+(\s+[A-Za-zА-Яа-яЁё]+)?" required /></p>
+    <p>Имя адвоката <input type="text" id="lawyerName" placeholder="Lawyer"
+            pattern="[A-Za-zА-Яа-яЁё]+(\s+[A-Za-zА-Яа-яЁё]+)?" required /></p>
+    <p>Номер дела <input type="text" id="caseNumber" oninput="changeOnNumber(this)" placeholder="Number" minlength="4"
+            maxlength="14" required /></p>
+    <div id="errorMessage"></div>
+
+    <button type="button" onclick="checkAll()">Отправить</button>
+    <script src="index.js"></script>
+</body>
+
+</html>
