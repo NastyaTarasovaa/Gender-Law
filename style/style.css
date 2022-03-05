@@ -10,9 +10,27 @@ header {
     grid-column: 1/4;
     grid-row: 1/2;
     grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: 128px repeat(2, 1fr);
-    ;
+    grid-template-columns: 64px 1fr 2fr;
     align-items: center;
+    gap: 5px;
+    padding: 5px 15px;
+    margin-left: 15vw;
+}
+
+.logo {
+    max-height: 64px;
+}
+
+h1 {
+    padding: 0 40px;
+    font-size: 45px;
+}
+
+h2 {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    font-size: 25px;
 }
 
 main {
