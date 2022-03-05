@@ -3,14 +3,6 @@ const changeOnNumber = elem => {
     elem.value = value.replace(/\D/g, '');
 }
 
-class courtСase {
-    constructor(judgename, lawyername, casenumber) {
-        this.judgename = judgename;
-        this.lawyername = lawyername;
-        this.casenumber = casenumber;
-    }
-}
-
 let errors = [];
 
 function checkValidity(input) {

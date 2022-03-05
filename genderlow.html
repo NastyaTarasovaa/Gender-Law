@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .answer {
+            background-color: beige;
+            width: 100vw;
+            height: 70vh;
+        }
+
+        .result {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+        }
+
+        .captureresult {
+            text-align: start;
+            font-weight: bolder;
+            font-size: 20;
+            text-transform: uppercase;
+        }
+
+        .sort {
+            margin-right: 40px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="answer">
+        <div class="result">
+            <h5 class="captureresult">результат</h5>
+            <select class="sort">
+                <option value="date">Дата</option>
+                <option value="alphabet">Название</option>
+            </select>
+        </div>
+    </div>
+</body>
+
+</html>
